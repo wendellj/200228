@@ -22,6 +22,7 @@ public class DisposalScript : MonoBehaviour
         if (other.CompareTag("BallToSpawn") && CompareTag("Disposal"))
         {
             Debug.Log("destroying object");
+            GameManager.instance.RemoveItemFromManager(other.gameObject);
             Destroy(other.gameObject);
         }
     }
@@ -32,6 +33,7 @@ public class DisposalScript : MonoBehaviour
         if (other.CompareTag("BallToSpawn") && CompareTag("Disposal"))
         {
             Debug.Log("destroying object");
+            GameManager.instance.RemoveItemFromManager(other.gameObject);
             Destroy(other.gameObject);
         }
     }

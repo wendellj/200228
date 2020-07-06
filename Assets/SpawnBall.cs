@@ -35,5 +35,8 @@ public class SpawnBall : MonoBehaviour
         //Debug.Log($"X:{x}, Y:{y}, Z:{z}");
         //QuestDebug.Instance.Log($"Created ball at: X:{ballPosition.x}, Y:{ballPosition.y}, Z:{ballPosition.z}, force: X:{x}, Y:{y}, Z:{z}");
         r.AddForce(x,y,z, ForceMode.VelocityChange);
+
+        //Add this ball to the item list
+        GameManager.instance.AddItemToManager(newBall);
     }
 }
